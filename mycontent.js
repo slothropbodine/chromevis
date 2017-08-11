@@ -13,11 +13,15 @@ function main()  {
 		titles.push({'text': this.text});
     });
 
-	chrome.storage.sync.set({'titles': titles}, function() {
-		console.log('Settings saved');
-	});
+	console.log(titles.length);
+	if(titles.length > 25) {
+		chrome.storage.sync.set({'titles': titles}, function() {
+			console.log('Settings saved');
+		});
+	}
 
 	chrome.storage.sync.get(["titles"], function(items){
-		console.log(items);
 	});
 }
+
+

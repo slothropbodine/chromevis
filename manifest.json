@@ -11,7 +11,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://www.reddit.com/*"],
+      "matches": ["*://www.play.google.com/music/*"],
       "js": ["jquery-3.2.1.min.js", "mycontent.js"]
     }
   ],
